@@ -2,7 +2,8 @@ public class Snake{
    //fields
    private int x;
    private int y;
-   private String sound;   
+   private String sound;
+   
    //constructors
    public Snake(){
       x = (int) Math.floor(Math.random()*10);

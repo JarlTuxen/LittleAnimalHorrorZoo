@@ -2,7 +2,8 @@ public class Rabbit{
    //fields
    private int x;
    private int y;
-   private String sound;   
+   private String sound;
+   
    //constructors
    public Rabbit(){
       x = (int) Math.floor(Math.random()*10);
