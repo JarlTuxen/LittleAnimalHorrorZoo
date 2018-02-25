@@ -6,8 +6,8 @@ public class Rabbit{
    
    //constructors
    public Rabbit(){
-      x = (int) Math.floor(Math.random()*10);
-      y = (int) Math.floor(Math.random()*10);
+      x = randomInterval(0,9);
+      y = randomInterval(0,9);
       sound = "I'm the rabbit and I'm standing at ";
    }
    
@@ -45,8 +45,11 @@ public class Rabbit{
    
    //move random -1, 0 or 1
    public void move(){
-      x += Math.floor(Math.random()*3)-1;
-      y += Math.floor(Math.random()*3)-1;
+      //x += Math.floor(Math.random()*3)-1;
+      //y += Math.floor(Math.random()*3)-1;
+      x += randomInterval(-1, 1);
+      y += randomInterval(-1, 1);
+      
       //x in [0;9]
       if (x<0)
          x = 0;
@@ -67,5 +70,11 @@ public class Rabbit{
    //beg
    public void beg(){
       System.out.println("Please don't eat me");
+   }
+   
+   //random number in [low;high]
+   public int randomInterval(int low, int high){
+      int interval = high - low + 1;
+      return (int) Math.floor(Math.random() * interval) + low;
    }
 }
